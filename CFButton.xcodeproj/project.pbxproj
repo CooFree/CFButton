@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8077BF21F2080DD009A52D5 /* BAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B8077BF11F205BF6009A52D5 /* BAButton.m */; };
+		B8077BF31F2080E5009A52D5 /* JKCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F5AE551F18CB1C00AE3E03 /* JKCountDownButton.m */; };
 		B8F5AE3F1F18CB0500AE3E03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F5AE3E1F18CB0500AE3E03 /* AppDelegate.m */; };
 		B8F5AE421F18CB0500AE3E03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F5AE411F18CB0500AE3E03 /* ViewController.m */; };
 		B8F5AE451F18CB0500AE3E03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F5AE431F18CB0500AE3E03 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8077BF01F205BF6009A52D5 /* BAButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAButton.h; sourceTree = "<group>"; };
+		B8077BF11F205BF6009A52D5 /* BAButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAButton.m; sourceTree = "<group>"; };
 		B8F5AE3A1F18CB0500AE3E03 /* CFButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F5AE3D1F18CB0500AE3E03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8F5AE3E1F18CB0500AE3E03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8077BEF1F205BF6009A52D5 /* BAButton */ = {
+			isa = PBXGroup;
+			children = (
+				B8077BF01F205BF6009A52D5 /* BAButton.h */,
+				B8077BF11F205BF6009A52D5 /* BAButton.m */,
+			);
+			path = BAButton;
+			sourceTree = "<group>";
+		};
 		B8F5AE311F18CB0500AE3E03 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +73,7 @@
 		B8F5AE3C1F18CB0500AE3E03 /* CFButton */ = {
 			isa = PBXGroup;
 			children = (
+				B8077BEF1F205BF6009A52D5 /* BAButton */,
 				B8F5AE531F18CB1C00AE3E03 /* JKCountDownButton */,
 				B8F5AE3D1F18CB0500AE3E03 /* AppDelegate.h */,
 				B8F5AE3E1F18CB0500AE3E03 /* AppDelegate.m */,
@@ -153,6 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8077BF31F2080E5009A52D5 /* JKCountDownButton.m in Sources */,
+				B8077BF21F2080DD009A52D5 /* BAButton.m in Sources */,
 				B8F5AE421F18CB0500AE3E03 /* ViewController.m in Sources */,
 				B8F5AE4D1F18CB0500AE3E03 /* main.m in Sources */,
 				B8F5AE3F1F18CB0500AE3E03 /* AppDelegate.m in Sources */,
@@ -324,6 +340,7 @@
 				B8F5AE521F18CB0500AE3E03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
