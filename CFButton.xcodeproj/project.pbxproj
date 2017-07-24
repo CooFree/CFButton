@@ -20,6 +20,18 @@
 /* Begin PBXFileReference section */
 		B8077BF01F205BF6009A52D5 /* BAButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAButton.h; sourceTree = "<group>"; };
 		B8077BF11F205BF6009A52D5 /* BAButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAButton.m; sourceTree = "<group>"; };
+		B88073D91F25DA6900EB67D2 /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBubbleMenuButton.h; sourceTree = "<group>"; };
+		B88073DA1F25DA6A00EB67D2 /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBubbleMenuButton.m; sourceTree = "<group>"; };
+		B88073DC1F25DA6A00EB67D2 /* DCPathButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCPathButton.h; sourceTree = "<group>"; };
+		B88073DD1F25DA6A00EB67D2 /* DCPathButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPathButton.m; sourceTree = "<group>"; };
+		B88073DE1F25DA6A00EB67D2 /* DCPathCenterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCPathCenterButton.h; sourceTree = "<group>"; };
+		B88073DF1F25DA6A00EB67D2 /* DCPathCenterButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPathCenterButton.m; sourceTree = "<group>"; };
+		B88073E01F25DA6A00EB67D2 /* DCPathItemButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCPathItemButton.h; sourceTree = "<group>"; };
+		B88073E11F25DA6A00EB67D2 /* DCPathItemButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPathItemButton.m; sourceTree = "<group>"; };
+		B88073E31F25DA6A00EB67D2 /* MCFireworksButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCFireworksButton.h; sourceTree = "<group>"; };
+		B88073E41F25DA6A00EB67D2 /* MCFireworksButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCFireworksButton.m; sourceTree = "<group>"; };
+		B88073E51F25DA6A00EB67D2 /* MCFireworksView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCFireworksView.h; sourceTree = "<group>"; };
+		B88073E61F25DA6A00EB67D2 /* MCFireworksView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCFireworksView.m; sourceTree = "<group>"; };
 		B8F5AE3A1F18CB0500AE3E03 /* CFButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F5AE3D1F18CB0500AE3E03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8F5AE3E1F18CB0500AE3E03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +66,39 @@
 			path = BAButton;
 			sourceTree = "<group>";
 		};
+		B88073D81F25DA6900EB67D2 /* DWBubbleMenuButton */ = {
+			isa = PBXGroup;
+			children = (
+				B88073D91F25DA6900EB67D2 /* DWBubbleMenuButton.h */,
+				B88073DA1F25DA6A00EB67D2 /* DWBubbleMenuButton.m */,
+			);
+			path = DWBubbleMenuButton;
+			sourceTree = "<group>";
+		};
+		B88073DB1F25DA6A00EB67D2 /* DCPathButton */ = {
+			isa = PBXGroup;
+			children = (
+				B88073DC1F25DA6A00EB67D2 /* DCPathButton.h */,
+				B88073DD1F25DA6A00EB67D2 /* DCPathButton.m */,
+				B88073DE1F25DA6A00EB67D2 /* DCPathCenterButton.h */,
+				B88073DF1F25DA6A00EB67D2 /* DCPathCenterButton.m */,
+				B88073E01F25DA6A00EB67D2 /* DCPathItemButton.h */,
+				B88073E11F25DA6A00EB67D2 /* DCPathItemButton.m */,
+			);
+			path = DCPathButton;
+			sourceTree = "<group>";
+		};
+		B88073E21F25DA6A00EB67D2 /* MCFireworksButton */ = {
+			isa = PBXGroup;
+			children = (
+				B88073E31F25DA6A00EB67D2 /* MCFireworksButton.h */,
+				B88073E41F25DA6A00EB67D2 /* MCFireworksButton.m */,
+				B88073E51F25DA6A00EB67D2 /* MCFireworksView.h */,
+				B88073E61F25DA6A00EB67D2 /* MCFireworksView.m */,
+			);
+			path = MCFireworksButton;
+			sourceTree = "<group>";
+		};
 		B8F5AE311F18CB0500AE3E03 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +118,9 @@
 		B8F5AE3C1F18CB0500AE3E03 /* CFButton */ = {
 			isa = PBXGroup;
 			children = (
+				B88073DB1F25DA6A00EB67D2 /* DCPathButton */,
+				B88073D81F25DA6900EB67D2 /* DWBubbleMenuButton */,
+				B88073E21F25DA6A00EB67D2 /* MCFireworksButton */,
 				B8077BEF1F205BF6009A52D5 /* BAButton */,
 				B8F5AE531F18CB1C00AE3E03 /* JKCountDownButton */,
 				B8F5AE3D1F18CB0500AE3E03 /* AppDelegate.h */,
