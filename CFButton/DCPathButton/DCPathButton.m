@@ -9,7 +9,7 @@
 #import "DCPathButton.h"
 #import "DCPathCenterButton.h"
 
-@interface DCPathButton ()<DCPathCenterButtonDelegate, DCPathItemButtonDelegate>
+@interface DCPathButton ()<CAAnimationDelegate,DCPathCenterButtonDelegate, DCPathItemButtonDelegate>
 
 #pragma mark - Private Property
 
@@ -176,8 +176,19 @@
 
 - (CGPoint)createEndPointWithRadius:(CGFloat)itemExpandRadius andAngel:(CGFloat)angel
 {
+    //向左
+    return CGPointMake(self.pathCenterButtonBloomCenter.x - sinf(angel * M_PI) * itemExpandRadius,
+                       self.pathCenterButtonBloomCenter.y - cosf(angel * M_PI) * itemExpandRadius);
+    //向右
+    return CGPointMake(self.pathCenterButtonBloomCenter.x + sinf(angel * M_PI) * itemExpandRadius,
+                       self.pathCenterButtonBloomCenter.y - cosf(angel * M_PI) * itemExpandRadius);
+    //向上
     return CGPointMake(self.pathCenterButtonBloomCenter.x - cosf(angel * M_PI) * itemExpandRadius,
                        self.pathCenterButtonBloomCenter.y - sinf(angel * M_PI) * itemExpandRadius);
+    //向下
+    return CGPointMake(self.pathCenterButtonBloomCenter.x - cosf(angel * M_PI) * itemExpandRadius,
+                       self.pathCenterButtonBloomCenter.y + sinf(angel * M_PI) * itemExpandRadius);
+
 }
 
 #pragma mark - Center Button Fold
