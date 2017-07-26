@@ -84,7 +84,7 @@
     DCPathButton *dcPathButton = [[DCPathButton alloc]initWithCenterImage:[UIImage imageNamed:@"chooser-button-tab"]
                                                            hilightedImage:[UIImage imageNamed:@"chooser-button-tab-highlighted"]];
     _pathAnimationView = dcPathButton;
-
+    dcPathButton.pathDirection = PathDirectionLeft;
     dcPathButton.delegate = self;
 
     // Configure item buttons

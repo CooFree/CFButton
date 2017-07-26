@@ -12,6 +12,14 @@
 @import QuartzCore;
 @import AudioToolbox;
 
+//按钮散落方向
+typedef enum : NSUInteger {
+    PathDirectionLeft,
+    PathDirectionRight,
+    PathDirectionUP,
+    PathDirectionDown,
+} PathDirection;
+
 @protocol DCPathButtonDelegate <NSObject>
 
 - (void)itemButtonTappedAtIndex:(NSUInteger)index;
@@ -21,6 +29,7 @@
 @interface DCPathButton : UIView
 
 @property (weak, nonatomic) id<DCPathButtonDelegate> delegate;
+@property (nonatomic, assign) PathDirection pathDirection;
 
 @property (strong, nonatomic) NSMutableArray *itemButtonImages;
 @property (strong, nonatomic) NSMutableArray *itemButtonHighlightedImages;
