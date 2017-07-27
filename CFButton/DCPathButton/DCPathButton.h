@@ -39,6 +39,11 @@ typedef enum : NSUInteger {
 
 @property (assign, nonatomic) CGFloat bloomRadius;
 
+/**
+ 按钮的中心位置
+ */
+@property (assign, nonatomic) CGPoint patnBtnCenter;
+
 - (id)initWithCenterImage:(UIImage *)centerImage hilightedImage:(UIImage *)centerHighlightedImage;
 - (void)addPathItems:(NSArray *)pathItemButtons;
 

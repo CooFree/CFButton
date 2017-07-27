@@ -67,7 +67,11 @@
     }
     return self;
 }
-
+- (void)setPatnBtnCenter:(CGPoint)patnBtnCenter {
+    self.foldCenter = CGPointMake(patnBtnCenter.x, patnBtnCenter.y);
+//    self.center = self.foldCenter;
+    self.frame = CGRectMake(patnBtnCenter.x-_pathCenterButton.frame.size.width/2, patnBtnCenter.y-_pathCenterButton.frame.size.height/2, self.frame.size.width, self.frame.size.height);
+}
 - (void)configureViewsLayout
 {
     // Init some property only once
