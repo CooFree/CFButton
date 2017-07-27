@@ -27,7 +27,7 @@
 @property (assign, nonatomic) CGPoint pathCenterButtonBloomCenter;
 
 @property (assign, nonatomic) CGPoint expandCenter;
-@property (strong, nonatomic) UIView *bottomView;
+@property (strong, nonatomic) UIVisualEffectView  *bottomView;
 @property (strong, nonatomic) DCPathCenterButton *pathCenterButton;
 @property (strong, nonatomic) NSMutableArray *itemButtons;
 
@@ -101,10 +101,14 @@
     
     // Configure bottom view
     //
-    _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.bloomSize.width, self.bloomSize.height)];
+//    _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.bloomSize.width, self.bloomSize.height)];
+//    _bottomView.backgroundColor = [UIColor blackColor];
+//    _bottomView.alpha = 0.0f;
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    _bottomView = [[UIVisualEffectView alloc] initWithEffect:blur];
     _bottomView.backgroundColor = [UIColor blackColor];
-    _bottomView.alpha = 0.0f;
-    
+    _bottomView.frame = CGRectMake(0, 0, self.bloomSize.width, self.bloomSize.height);
+
 }
 
 
@@ -330,7 +334,7 @@
     self.center = CGPointMake(self.bloomSize.width / 2, self.bloomSize.height / 2);
     
     [self insertSubview:self.bottomView belowSubview:self.pathCenterButton];
-    
+
     // 3. Excute the bottom view alpha animation
     //
     [UIView animateWithDuration:0.0618f * 3
