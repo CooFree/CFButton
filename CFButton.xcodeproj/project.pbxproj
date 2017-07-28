@@ -36,6 +36,10 @@
 		B88074191F27687F00EB67D2 /* bloom.caf in Resources */ = {isa = PBXBuildFile; fileRef = B88074161F27687000EB67D2 /* bloom.caf */; };
 		B880741A1F27687F00EB67D2 /* fold.caf in Resources */ = {isa = PBXBuildFile; fileRef = B88074171F27687000EB67D2 /* fold.caf */; };
 		B880741B1F27687F00EB67D2 /* selected.caf in Resources */ = {isa = PBXBuildFile; fileRef = B88074181F27687000EB67D2 /* selected.caf */; };
+		B8CDA7001F29F12500689E3C /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CDA6FF1F29F11200689E3C /* UIButton+Addition.m */; };
+		B8D119DC1F2B117700B31654 /* CFMenuPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D119DB1F2B117700B31654 /* CFMenuPopView.m */; };
+		B8D119DF1F2B16B900B31654 /* UIImage+CFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D119DE1F2B16B900B31654 /* UIImage+CFImage.m */; };
+		B8D119E21F2B178900B31654 /* UIView+CFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D119E11F2B178900B31654 /* UIView+CFAnimation.m */; };
 		B8F5AE3F1F18CB0500AE3E03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F5AE3E1F18CB0500AE3E03 /* AppDelegate.m */; };
 		B8F5AE421F18CB0500AE3E03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F5AE411F18CB0500AE3E03 /* ViewController.m */; };
 		B8F5AE451F18CB0500AE3E03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F5AE431F18CB0500AE3E03 /* Main.storyboard */; };
@@ -79,6 +83,14 @@
 		B88074161F27687000EB67D2 /* bloom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bloom.caf; sourceTree = "<group>"; };
 		B88074171F27687000EB67D2 /* fold.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fold.caf; sourceTree = "<group>"; };
 		B88074181F27687000EB67D2 /* selected.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = selected.caf; sourceTree = "<group>"; };
+		B8CDA6FE1F29F11200689E3C /* UIButton+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addition.h"; sourceTree = "<group>"; };
+		B8CDA6FF1F29F11200689E3C /* UIButton+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
+		B8D119DA1F2B117700B31654 /* CFMenuPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFMenuPopView.h; sourceTree = "<group>"; };
+		B8D119DB1F2B117700B31654 /* CFMenuPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFMenuPopView.m; sourceTree = "<group>"; };
+		B8D119DD1F2B16B900B31654 /* UIImage+CFImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CFImage.h"; sourceTree = "<group>"; };
+		B8D119DE1F2B16B900B31654 /* UIImage+CFImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CFImage.m"; sourceTree = "<group>"; };
+		B8D119E01F2B178900B31654 /* UIView+CFAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CFAnimation.h"; sourceTree = "<group>"; };
+		B8D119E11F2B178900B31654 /* UIView+CFAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CFAnimation.m"; sourceTree = "<group>"; };
 		B8F5AE3A1F18CB0500AE3E03 /* CFButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F5AE3D1F18CB0500AE3E03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8F5AE3E1F18CB0500AE3E03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -173,6 +185,36 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		B8CDA6FC1F29F11200689E3C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B8CDA6FD1F29F11200689E3C /* UIButton */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		B8CDA6FD1F29F11200689E3C /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				B8CDA6FE1F29F11200689E3C /* UIButton+Addition.h */,
+				B8CDA6FF1F29F11200689E3C /* UIButton+Addition.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		B8D119D91F2B0E6700B31654 /* CFMenuButton */ = {
+			isa = PBXGroup;
+			children = (
+				B8D119DA1F2B117700B31654 /* CFMenuPopView.h */,
+				B8D119DB1F2B117700B31654 /* CFMenuPopView.m */,
+				B8D119DD1F2B16B900B31654 /* UIImage+CFImage.h */,
+				B8D119DE1F2B16B900B31654 /* UIImage+CFImage.m */,
+				B8D119E01F2B178900B31654 /* UIView+CFAnimation.h */,
+				B8D119E11F2B178900B31654 /* UIView+CFAnimation.m */,
+			);
+			path = CFMenuButton;
+			sourceTree = "<group>";
+		};
 		B8F5AE311F18CB0500AE3E03 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +234,7 @@
 		B8F5AE3C1F18CB0500AE3E03 /* CFButton */ = {
 			isa = PBXGroup;
 			children = (
+				B8D119D91F2B0E6700B31654 /* CFMenuButton */,
 				B88073DB1F25DA6A00EB67D2 /* DCPathButton */,
 				B88073E21F25DA6A00EB67D2 /* MCFireworksButton */,
 				B8077BEF1F205BF6009A52D5 /* BAButton */,
@@ -204,6 +247,7 @@
 				B88074151F27687000EB67D2 /* Sounds */,
 				B8F5AE431F18CB0500AE3E03 /* Main.storyboard */,
 				B8F5AE461F18CB0500AE3E03 /* Assets.xcassets */,
+				B8CDA6FC1F29F11200689E3C /* Category */,
 				B8F5AE481F18CB0500AE3E03 /* LaunchScreen.storyboard */,
 				B8F5AE4B1F18CB0500AE3E03 /* Info.plist */,
 				B8F5AE4C1F18CB0500AE3E03 /* main.m */,
@@ -312,8 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8CDA7001F29F12500689E3C /* UIButton+Addition.m in Sources */,
 				B88073E71F2764DF00EB67D2 /* DCPathButton.m in Sources */,
+				B8D119E21F2B178900B31654 /* UIView+CFAnimation.m in Sources */,
 				B88073E81F2764DF00EB67D2 /* DCPathCenterButton.m in Sources */,
+				B8D119DF1F2B16B900B31654 /* UIImage+CFImage.m in Sources */,
 				B88073E91F2764DF00EB67D2 /* DCPathItemButton.m in Sources */,
 				B88073EB1F2764DF00EB67D2 /* MCFireworksButton.m in Sources */,
 				B88073EC1F2764DF00EB67D2 /* MCFireworksView.m in Sources */,
@@ -321,6 +368,7 @@
 				B8077BF21F2080DD009A52D5 /* BAButton.m in Sources */,
 				B8F5AE421F18CB0500AE3E03 /* ViewController.m in Sources */,
 				B8F5AE4D1F18CB0500AE3E03 /* main.m in Sources */,
+				B8D119DC1F2B117700B31654 /* CFMenuPopView.m in Sources */,
 				B8F5AE3F1F18CB0500AE3E03 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

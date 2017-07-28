@@ -6,12 +6,17 @@
 //  Copyright © 2017年 CooFree. All rights reserved.
 //
 
+
 #import "ViewController.h"
+
+#import "UIButton+Addition.h"
+
 #import "JKCountDownButton.h"
 #import "BAButton.h"
 
 #import "DCPathButton.h"
 #import "MCFireworksButton.h"
+#import "CFMenuPopView.h"
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
@@ -32,6 +37,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    UIButton *btn = [UIButton buttonWithTitle:@"MenuPopView" normalColor:[UIColor blackColor] diableColor:[UIColor grayColor] fontSize:17 target:self action:@selector(btnClick)];
+    btn.backgroundColor = [UIColor lightGrayColor];
+    btn.frame = CGRectMake(self.view.frame.size.width/2-60, 100, 120, 32);
+    [self.view addSubview:btn];
+
     [self buildCountDown];
 
 //    [self buttonTest];
@@ -40,6 +50,12 @@
 
     [self ConfigureDCPathButton];
 
+
+}
+- (void)btnClick {
+    [CFMenuPopView showToView:self.view.window withItems:@[] andSelectBlock:^(UIButton *item) {
+
+    }];
 }
 
 - (void)buildCountDown{

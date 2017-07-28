@@ -13,12 +13,12 @@
 @import AudioToolbox;
 
 //按钮散落方向
-typedef enum : NSUInteger {
+typedef NS_ENUM(NSUInteger, PathDirection) {
     PathDirectionLeft,
     PathDirectionRight,
     PathDirectionUP,
     PathDirectionDown,
-} PathDirection;
+};
 
 @protocol DCPathButtonDelegate <NSObject>
 
