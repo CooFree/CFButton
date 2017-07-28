@@ -44,8 +44,6 @@
 
     [self buildCountDown];
 
-//    [self buttonTest];
-
     [self clickGoodAnimation];
 
     [self ConfigureDCPathButton];
