@@ -40,6 +40,9 @@
 		B8D119DC1F2B117700B31654 /* CFMenuPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D119DB1F2B117700B31654 /* CFMenuPopView.m */; };
 		B8D119E91F2B2F9F00B31654 /* UIImage+CFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D119E81F2B2F9500B31654 /* UIImage+CFImage.m */; };
 		B8D119EA1F2B2F9F00B31654 /* UIView+CFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D119E51F2B2F9500B31654 /* UIView+CFAnimation.m */; };
+		B8D119ED1F2B3B9F00B31654 /* CFItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D119EC1F2B3B9F00B31654 /* CFItem.m */; };
+		B8D119F01F2B3C0500B31654 /* CFCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D119EF1F2B3C0500B31654 /* CFCenterView.m */; };
+		B8D119F31F2B451800B31654 /* CFItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D119F21F2B451800B31654 /* CFItemGroup.m */; };
 		B8F5AE3F1F18CB0500AE3E03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F5AE3E1F18CB0500AE3E03 /* AppDelegate.m */; };
 		B8F5AE421F18CB0500AE3E03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F5AE411F18CB0500AE3E03 /* ViewController.m */; };
 		B8F5AE451F18CB0500AE3E03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F5AE431F18CB0500AE3E03 /* Main.storyboard */; };
@@ -91,6 +94,12 @@
 		B8D119E51F2B2F9500B31654 /* UIView+CFAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CFAnimation.m"; sourceTree = "<group>"; };
 		B8D119E71F2B2F9500B31654 /* UIImage+CFImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CFImage.h"; sourceTree = "<group>"; };
 		B8D119E81F2B2F9500B31654 /* UIImage+CFImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CFImage.m"; sourceTree = "<group>"; };
+		B8D119EB1F2B3B9F00B31654 /* CFItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFItem.h; sourceTree = "<group>"; };
+		B8D119EC1F2B3B9F00B31654 /* CFItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFItem.m; sourceTree = "<group>"; };
+		B8D119EE1F2B3C0500B31654 /* CFCenterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFCenterView.h; sourceTree = "<group>"; };
+		B8D119EF1F2B3C0500B31654 /* CFCenterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFCenterView.m; sourceTree = "<group>"; };
+		B8D119F11F2B451800B31654 /* CFItemGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFItemGroup.h; sourceTree = "<group>"; };
+		B8D119F21F2B451800B31654 /* CFItemGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFItemGroup.m; sourceTree = "<group>"; };
 		B8F5AE3A1F18CB0500AE3E03 /* CFButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F5AE3D1F18CB0500AE3E03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8F5AE3E1F18CB0500AE3E03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -209,6 +218,12 @@
 			children = (
 				B8D119DA1F2B117700B31654 /* CFMenuPopView.h */,
 				B8D119DB1F2B117700B31654 /* CFMenuPopView.m */,
+				B8D119EE1F2B3C0500B31654 /* CFCenterView.h */,
+				B8D119EF1F2B3C0500B31654 /* CFCenterView.m */,
+				B8D119F11F2B451800B31654 /* CFItemGroup.h */,
+				B8D119F21F2B451800B31654 /* CFItemGroup.m */,
+				B8D119EB1F2B3B9F00B31654 /* CFItem.h */,
+				B8D119EC1F2B3B9F00B31654 /* CFItem.m */,
 			);
 			path = CFMenuButton;
 			sourceTree = "<group>";
@@ -373,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8D119E91F2B2F9F00B31654 /* UIImage+CFImage.m in Sources */,
+				B8D119F31F2B451800B31654 /* CFItemGroup.m in Sources */,
 				B8D119EA1F2B2F9F00B31654 /* UIView+CFAnimation.m in Sources */,
 				B8CDA7001F29F12500689E3C /* UIButton+Addition.m in Sources */,
 				B88073E71F2764DF00EB67D2 /* DCPathButton.m in Sources */,
@@ -382,9 +398,11 @@
 				B88073EC1F2764DF00EB67D2 /* MCFireworksView.m in Sources */,
 				B8077BF31F2080E5009A52D5 /* JKCountDownButton.m in Sources */,
 				B8077BF21F2080DD009A52D5 /* BAButton.m in Sources */,
+				B8D119ED1F2B3B9F00B31654 /* CFItem.m in Sources */,
 				B8F5AE421F18CB0500AE3E03 /* ViewController.m in Sources */,
 				B8F5AE4D1F18CB0500AE3E03 /* main.m in Sources */,
 				B8D119DC1F2B117700B31654 /* CFMenuPopView.m in Sources */,
+				B8D119F01F2B3C0500B31654 /* CFCenterView.m in Sources */,
 				B8F5AE3F1F18CB0500AE3E03 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
