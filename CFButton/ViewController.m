@@ -51,7 +51,29 @@
 
 }
 - (void)btnClick {
-    [CFMenuPopView showToView:self.view.window withItems:@[] andSelectBlock:^(UIButton *item) {
+    CFItem * item0 = [[CFItem alloc]initWithTitle:@"Text" Icon:@"images.bundle/tabbar_compose_idea"];
+    CFItem * item1 = [[CFItem alloc]initWithTitle:@"Albums" Icon:@"images.bundle/tabbar_compose_photo"];
+    CFItem * item2 = [[CFItem alloc]initWithTitle:@"Camera" Icon:@"images.bundle/tabbar_compose_camera"];
+    //第4个按钮内部有一组
+    CFItemGroup * item3 = [[CFItemGroup alloc]initWithTitle:@"Check in" Icon:@"images.bundle/tabbar_compose_lbs"];
+    CFItem * item31 = [[CFItem alloc]initWithTitle:@"Friend Circle" Icon:@"images.bundle/tabbar_compose_friend"];
+    CFItem * item32 = [[CFItem alloc]initWithTitle:@"Weibo Camera" Icon:@"images.bundle/tabbar_compose_wbcamera"];
+    CFItem * item33 = [[CFItem alloc]initWithTitle:@"Music" Icon:@"images.bundle/tabbar_compose_music"];
+    item3.items = @[item31,item32,item33];
+
+    CFItem * item4 = [[CFItem alloc]initWithTitle:@"Review" Icon:@"images.bundle/tabbar_compose_review"];
+
+    //第六个按钮内部有一组
+    CFItemGroup * item5 = [[CFItemGroup alloc]initWithTitle:@"More" Icon:@"images.bundle/tabbar_compose_more"];
+    CFItem * item51 = [[CFItem alloc]initWithTitle:@"Friend Circle" Icon:@"images.bundle/tabbar_compose_friend"];
+    CFItem * item52 = [[CFItem alloc]initWithTitle:@"Weibo Camera" Icon:@"images.bundle/tabbar_compose_wbcamera"];
+    CFItem * item53 = [[CFItem alloc]initWithTitle:@"Music" Icon:@"images.bundle/tabbar_compose_music"];
+    CFItem * item54 = [[CFItem alloc]initWithTitle:@"Blog" Icon:@"images.bundle/tabbar_compose_weibo"];
+    CFItem * item55 = [[CFItem alloc]initWithTitle:@"Collection" Icon:@"images.bundle/tabbar_compose_transfer"];
+    CFItem * item56 = [[CFItem alloc]initWithTitle:@"Voice" Icon:@"images.bundle/tabbar_compose_voice"];
+    item5.items = @[item51,item52,item53,item54,item55,item56];
+    
+    [CFMenuPopView showToView:self.view.window withItems:@[item0,item1,item2,item3,item4,item5] andSelectBlock:^(CFItem *item) {
 
     }];
 }

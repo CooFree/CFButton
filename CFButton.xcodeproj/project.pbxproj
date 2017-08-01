@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B8077BF21F2080DD009A52D5 /* BAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B8077BF11F205BF6009A52D5 /* BAButton.m */; };
 		B8077BF31F2080E5009A52D5 /* JKCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F5AE551F18CB1C00AE3E03 /* JKCountDownButton.m */; };
+		B8279AF31F30157200800799 /* images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B8279AF21F30155E00800799 /* images.bundle */; };
+		B8279AF61F3024DA00800799 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = B8279AF51F3024D000800799 /* UIButton+ImageTitleSpacing.m */; };
 		B88073E71F2764DF00EB67D2 /* DCPathButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B88073DD1F25DA6A00EB67D2 /* DCPathButton.m */; };
 		B88073E81F2764DF00EB67D2 /* DCPathCenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B88073DF1F25DA6A00EB67D2 /* DCPathCenterButton.m */; };
 		B88073E91F2764DF00EB67D2 /* DCPathItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B88073E11F25DA6A00EB67D2 /* DCPathItemButton.m */; };
@@ -54,6 +56,9 @@
 /* Begin PBXFileReference section */
 		B8077BF01F205BF6009A52D5 /* BAButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAButton.h; sourceTree = "<group>"; };
 		B8077BF11F205BF6009A52D5 /* BAButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAButton.m; sourceTree = "<group>"; };
+		B8279AF21F30155E00800799 /* images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = images.bundle; sourceTree = "<group>"; };
+		B8279AF41F3024D000800799 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
+		B8279AF51F3024D000800799 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		B88073DC1F25DA6A00EB67D2 /* DCPathButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCPathButton.h; sourceTree = "<group>"; };
 		B88073DD1F25DA6A00EB67D2 /* DCPathButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPathButton.m; sourceTree = "<group>"; };
 		B88073DE1F25DA6A00EB67D2 /* DCPathCenterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCPathCenterButton.h; sourceTree = "<group>"; };
@@ -209,6 +214,8 @@
 			children = (
 				B8CDA6FE1F29F11200689E3C /* UIButton+Addition.h */,
 				B8CDA6FF1F29F11200689E3C /* UIButton+Addition.m */,
+				B8279AF41F3024D000800799 /* UIButton+ImageTitleSpacing.h */,
+				B8279AF51F3024D000800799 /* UIButton+ImageTitleSpacing.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -274,6 +281,7 @@
 				B8F5AE3E1F18CB0500AE3E03 /* AppDelegate.m */,
 				B8F5AE401F18CB0500AE3E03 /* ViewController.h */,
 				B8F5AE411F18CB0500AE3E03 /* ViewController.m */,
+				B8279AF21F30155E00800799 /* images.bundle */,
 				B88073ED1F27663D00EB67D2 /* image */,
 				B88074151F27687000EB67D2 /* Sounds */,
 				B8F5AE431F18CB0500AE3E03 /* Main.storyboard */,
@@ -352,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8279AF31F30157200800799 /* images.bundle in Resources */,
 				B88074191F27687F00EB67D2 /* bloom.caf in Resources */,
 				B880741A1F27687F00EB67D2 /* fold.caf in Resources */,
 				B880741B1F27687F00EB67D2 /* selected.caf in Resources */,
@@ -387,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8279AF61F3024DA00800799 /* UIButton+ImageTitleSpacing.m in Sources */,
 				B8D119E91F2B2F9F00B31654 /* UIImage+CFImage.m in Sources */,
 				B8D119F31F2B451800B31654 /* CFItemGroup.m in Sources */,
 				B8D119EA1F2B2F9F00B31654 /* UIView+CFAnimation.m in Sources */,

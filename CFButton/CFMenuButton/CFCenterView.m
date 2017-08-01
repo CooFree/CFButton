@@ -7,8 +7,13 @@
 //
 
 #import "CFCenterView.h"
+
 #import "UIView+CFAnimation.h"
+#import "UIButton+ImageTitleSpacing.h"
+
 #import "CFItemGroup.h"
+
+
 
 
 @interface CFCenterView ()
@@ -92,10 +97,10 @@
     }
 }
 - (void)reloadData {
-    //    NSAssert(self.delegate, @"BHBCenterView`s delegate was nil.");
-    NSAssert(self.dataSource, @"BHBCenterView`s dataSource was nil.");
-    NSAssert([self.dataSource respondsToSelector:@selector(numberOfItemsWithCenterView:)], @"BHBCenterView`s was unimplementation numberOfItemsWithCenterView:.");
-    NSAssert([self.dataSource respondsToSelector:@selector(itemWithCenterView:item:)], @"BHBCenterView`s was unimplementation itemWithCenterView:item:.");
+    //    NSAssert(self.delegate, @"CFCenterView`s delegate was nil.");
+    NSAssert(self.dataSource, @"CFCenterView`s dataSource was nil.");
+    NSAssert([self.dataSource respondsToSelector:@selector(numberOfItemsWithCenterView:)], @"CFCenterView`s was unimplementation numberOfItemsWithCenterView:.");
+    NSAssert([self.dataSource respondsToSelector:@selector(itemWithCenterView:item:)], @"CFCenterView`s was unimplementation itemWithCenterView:item:.");
     [self.homeBtns makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.moreBtns makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
     [self.homeBtns removeAllObjects];
@@ -126,6 +131,7 @@
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
         [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:14];
+
         CGFloat x = (i % 3) * self.frame.size.width / 3.0;
         CGFloat y = (i / 3) * self.frame.size.height / 2.0;
         if (isMore) {
@@ -142,6 +148,8 @@
         [btn addTarget:self action:@selector(didCancelBtn:) forControlEvents:UIControlEventTouchDragInside];
         [self addSubview:btn];
         btn.frame = CGRectMake(x, y, width, height);
+        [btn layoutButtonWithEdgeInsetsStyle:CFButtonEdgeInsetsStyleTop imageTitleSpace:5];
+
     }
 }
 

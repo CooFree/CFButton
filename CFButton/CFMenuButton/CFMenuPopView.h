@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CFItemGroup.h"
 
 
-typedef void (^DidSelectItemBlock) (UIButton * item);
+typedef void (^DidSelectItemBlock) (CFItem * item);
 
 
 @interface CFMenuPopView : UIView

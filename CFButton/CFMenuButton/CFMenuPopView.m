@@ -11,11 +11,13 @@
 #import "UIImage+CFImage.h"
 #import "UIView+CFAnimation.h"
 
+#import "CFCenterView.h"
 
 
-@interface CFMenuPopView()
+@interface CFMenuPopView()<CFCenterViewDelegate,CFCenterViewDataSource>
 
 @property (nonatomic,weak) UIImageView * background;
+@property (nonatomic, strong) CFCenterView *centerView;
 
 @property (nonatomic,strong) NSArray * items;
 @property (nonatomic,copy) DidSelectItemBlock selectBlock;
@@ -56,23 +58,25 @@
         };
         [self addSubview:bar];
         self.bottomBar = bar;
-        BHBCenterView * centerView = [[BHBCenterView alloc]initWithFrame:CGRectMake(0, self.frame.size.height * 0.37, self.frame.size.width, self.frame.size.height * 0.4)];
+
+         */
+        CFCenterView * centerView = [[CFCenterView alloc]initWithFrame:CGRectMake(0, self.frame.size.height * 0.37, self.frame.size.width, self.frame.size.height * 0.4)];
         [self addSubview:centerView];
         centerView.delegate = self;
         centerView.dataSource = self;
         centerView.clipsToBounds = NO;
         self.centerView = centerView;
-        */
+
 
     }
     return self;
 }
 
 - (void)showItems {
-//    [self.centerView reloadData];
+    [self.centerView reloadData];
 }
 - (void)hideItems {
-//    [self.centerView dismis];
+    [self.centerView dismis];
 }
 
 + (instancetype)showToView:(UIView *)view withItems:(NSArray *)array andSelectBlock:(DidSelectItemBlock)block {
@@ -104,6 +108,36 @@
     [self hideItems];
     [self hide];
 }
+
+#pragma mark centerview delegate and datasource
+- (NSInteger)numberOfItemsWithCenterView:(CFCenterView *)centerView
+{
+    return self.items.count;
+}
+
+-(CFItem *)itemWithCenterView:(CFCenterView *)centerView item:(NSInteger)item
+{
+    return self.items[item];
+}
+
+-(void)didSelectItemWithCenterView:(CFCenterView *)centerView andItem:(CFItem *)item
+{
+    if (self.selectBlock) {
+        self.selectBlock(item);
+    }
+//    [[BHBPlaySoundTool sharedPlaySoundTool] playWithSoundName:@"open"];
+    [self hide];
+}
+
+- (void)didSelectMoreWithCenterView:(CFCenterView *)centerView andItem:(CFItemGroup *)group
+{
+    if (self.selectBlock) {
+        self.selectBlock(group);
+    }
+//    [[BHBPlaySoundTool sharedPlaySoundTool] playWithSoundName:@"open"];
+//    self.bottomBar.isMoreBar = YES;
+}
+
 
 + (UIImage *)imageWithView:(UIView *)view{
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(view.frame.size.width, view.frame.size.height), NO, [[UIScreen mainScreen] scale]);
