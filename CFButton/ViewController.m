@@ -42,6 +42,10 @@
     btn.frame = CGRectMake(self.view.frame.size.width/2-60, 100, 120, 32);
     [self.view addSubview:btn];
 
+    UIButton *btn2 = [UIButton buttonWithImagename:@"miyou_icon_+_fabu" hightImagename:nil bgImagename:nil target:self action:@selector(btn2Click:)];
+    btn2.frame = CGRectMake(self.view.frame.size.width/2-60, SCREEN_HEIGHT/2+150, 120, 120);
+    [self.view addSubview:btn2];
+
     [self buildCountDown];
 
     [self clickGoodAnimation];
@@ -50,7 +54,16 @@
 
 
 }
+- (void)btn2Click:(UIButton *)sender {
+
+    [CFMenuPopView showToView:self.view.window mainButtonFrame:sender.frame withType:MenuPopTypeButton andSelectBlock:^(CFItem *item) {
+
+    }];
+
+}
 - (void)btnClick {
+
+
     CFItem * item0 = [[CFItem alloc]initWithTitle:@"Text" Icon:@"images.bundle/tabbar_compose_idea"];
     CFItem * item1 = [[CFItem alloc]initWithTitle:@"Albums" Icon:@"images.bundle/tabbar_compose_photo"];
     CFItem * item2 = [[CFItem alloc]initWithTitle:@"Camera" Icon:@"images.bundle/tabbar_compose_camera"];
@@ -76,6 +89,7 @@
     [CFMenuPopView showToView:self.view.window withItems:@[item0,item1,item2,item3,item4,item5] andSelectBlock:^(CFItem *item) {
 
     }];
+
 }
 
 - (void)buildCountDown{

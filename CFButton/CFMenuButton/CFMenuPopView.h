@@ -9,12 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "CFItemGroup.h"
 
+typedef NS_ENUM(NSUInteger, MenuPopType) {
+    MenuPopTypeScreen,
+    MenuPopTypeButton,
+};
 
 typedef void (^DidSelectItemBlock) (CFItem * item);
 
 
 @interface CFMenuPopView : UIView
 
+@property (nonatomic, assign) MenuPopType popType;
 /**
  *  如果显示一个带more功能的，请使用此方法
  *
@@ -24,5 +29,6 @@ typedef void (^DidSelectItemBlock) (CFItem * item);
  *  @return pop视图
  */
 + (instancetype)showToView:(UIView *)view withItems:(NSArray *)array andSelectBlock:(DidSelectItemBlock)block;
++ (instancetype)showToView:(UIView *)view mainButtonFrame:(CGRect)mainBtnFrame withType:(MenuPopType)type andSelectBlock:(DidSelectItemBlock)block;
 
 @end
