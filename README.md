@@ -1,6 +1,4 @@
-# CFButton
 
-### 效果图
 ![](./1.gif)
 
 ###  PathButton
@@ -25,3 +23,12 @@ typedef NS_ENUM(NSUInteger, PathDirection) {
     [self insertSubview:self.fireworksView atIndex:0];
 }
 ```
+
+
+--------------------------
+
+
+## [CFCollectionButtonView](https://github.com/CooFree/CFCollectionButtonView)(多个button按collectionView排列 网格式排列)
+
+[![CFCollectionButtonView](https://github.com/CooFree/CFCollectionButtonView/blob/master/3.png)](https://github.com/CooFree/CFCollectionButtonView)
+
