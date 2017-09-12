@@ -242,6 +242,23 @@
     }
 }
 
+- (void)addPlusButton {
+    MMPulseView *pulseView = [MMPulseView new];
+
+    pulseView.frame = CGRectMake(0, 0, 60, 60);
+    pulseView.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    pulseView.colors = @[(__bridge id)[UIColor blueColor].CGColor,(__bridge id)[UIColor blueColor].CGColor];
+
+    pulseView.minRadius = 0;
+    pulseView.maxRadius = 80;
+
+    pulseView.duration = 5;
+    pulseView.count = 20;
+    pulseView.lineWidth = 1.0f;
+
+    [self.view addSubview:pulseView];
+
+}
 /*
 - (void)addPlusView {
     NSInteger maxI = 2;
