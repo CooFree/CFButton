@@ -67,6 +67,10 @@
 		B8279AF51F3024D000800799 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		B8279AFA1F307E0C00800799 /* CFBottomBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFBottomBar.h; sourceTree = "<group>"; };
 		B8279AFB1F307E0C00800799 /* CFBottomBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFBottomBar.m; sourceTree = "<group>"; };
+		B833C1501F6782D700FEC55A /* YouKuPlayButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouKuPlayButton.h; sourceTree = "<group>"; };
+		B833C1511F6782D700FEC55A /* YouKuPlayButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouKuPlayButton.m; sourceTree = "<group>"; };
+		B833C1531F6782E100FEC55A /* YouKuPlayButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouKuPlayButton.h; sourceTree = "<group>"; };
+		B833C1541F6782E100FEC55A /* YouKuPlayButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouKuPlayButton.m; sourceTree = "<group>"; };
 		B85EB2711F32D21B00355CEE /* CFTopButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFTopButtonView.h; sourceTree = "<group>"; };
 		B85EB2721F32D21B00355CEE /* CFTopButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFTopButtonView.m; sourceTree = "<group>"; };
 		B85EB2741F32D77F00355CEE /* miyou_icon_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "miyou_icon_close@3x.png"; sourceTree = "<group>"; };
@@ -151,6 +155,24 @@
 				B8077BF11F205BF6009A52D5 /* BAButton.m */,
 			);
 			path = BAButton;
+			sourceTree = "<group>";
+		};
+		B833C14F1F6782D700FEC55A /* YouKuPlayButton */ = {
+			isa = PBXGroup;
+			children = (
+				B833C1501F6782D700FEC55A /* YouKuPlayButton.h */,
+				B833C1511F6782D700FEC55A /* YouKuPlayButton.m */,
+			);
+			path = YouKuPlayButton;
+			sourceTree = "<group>";
+		};
+		B833C1521F6782E100FEC55A /* YouKuPlayButton */ = {
+			isa = PBXGroup;
+			children = (
+				B833C1531F6782E100FEC55A /* YouKuPlayButton.h */,
+				B833C1541F6782E100FEC55A /* YouKuPlayButton.m */,
+			);
+			path = YouKuPlayButton;
 			sourceTree = "<group>";
 		};
 		B88073DB1F25DA6A00EB67D2 /* DCPathButton */ = {
@@ -294,6 +316,8 @@
 		B8F5AE3C1F18CB0500AE3E03 /* CFButton */ = {
 			isa = PBXGroup;
 			children = (
+				B833C14F1F6782D700FEC55A /* YouKuPlayButton */,
+				B833C1521F6782E100FEC55A /* YouKuPlayButton */,
 				B8D119D91F2B0E6700B31654 /* CFMenuButton */,
 				B88073DB1F25DA6A00EB67D2 /* DCPathButton */,
 				B88073E21F25DA6A00EB67D2 /* MCFireworksButton */,
