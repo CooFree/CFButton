@@ -17,6 +17,9 @@
 #import "DCPathButton.h"
 #import "MCFireworksButton.h"
 #import "CFMenuPopView.h"
+#import "YouKuPlayButton.h"
+#import "iQiYiPlayButton.h"
+#import "MMPulseView.h"
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
@@ -24,6 +27,8 @@
 @interface ViewController ()<DCPathButtonDelegate>
 {
     JKCountDownButton *_countDownCode;
+    iQiYiPlayButton *_iQiYiPlayButton;
+    YouKuPlayButton *_youKuPlayButton;
 }
 @property (nonatomic , strong) DCPathButton *pathAnimationView;
 
@@ -205,7 +210,7 @@
         [_goodBtn setImage:[UIImage imageNamed:@"Like"] forState:UIControlStateNormal];
     }
 }
-/*
+
 - (void)addIQiYiPlayButton {
     //创建播放按钮，需要初始化一个状态，即显示暂停还是播放状态
     _iQiYiPlayButton = [[iQiYiPlayButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60) state:iQiYiPlayButtonStatePlay];
@@ -236,7 +241,7 @@
         _youKuPlayButton.buttonState = YouKuPlayButtonStatePause;
     }
 }
-*/
+
 /*
 - (void)addPlusView {
     NSInteger maxI = 2;

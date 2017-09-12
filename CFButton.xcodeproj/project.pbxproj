@@ -12,6 +12,9 @@
 		B8279AF31F30157200800799 /* images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B8279AF21F30155E00800799 /* images.bundle */; };
 		B8279AF61F3024DA00800799 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = B8279AF51F3024D000800799 /* UIButton+ImageTitleSpacing.m */; };
 		B8279AFC1F307E0C00800799 /* CFBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B8279AFB1F307E0C00800799 /* CFBottomBar.m */; };
+		B833C1581F67832A00FEC55A /* MMPulseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B833C1571F67830800FEC55A /* MMPulseView.m */; };
+		B833C1591F67832A00FEC55A /* YouKuPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B833C1511F6782D700FEC55A /* YouKuPlayButton.m */; };
+		B833C15E1F67836B00FEC55A /* iQiYiPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B833C15D1F67834F00FEC55A /* iQiYiPlayButton.m */; };
 		B85EB2731F32D21B00355CEE /* CFTopButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EB2721F32D21B00355CEE /* CFTopButtonView.m */; };
 		B85EB2781F32D79000355CEE /* miyou_icon_+_fabu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B85EB2761F32D77F00355CEE /* miyou_icon_+_fabu@2x.png */; };
 		B85EB2791F32D79000355CEE /* miyou_icon_+_fabu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B85EB2751F32D77F00355CEE /* miyou_icon_+_fabu@3x.png */; };
@@ -69,8 +72,10 @@
 		B8279AFB1F307E0C00800799 /* CFBottomBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFBottomBar.m; sourceTree = "<group>"; };
 		B833C1501F6782D700FEC55A /* YouKuPlayButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouKuPlayButton.h; sourceTree = "<group>"; };
 		B833C1511F6782D700FEC55A /* YouKuPlayButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouKuPlayButton.m; sourceTree = "<group>"; };
-		B833C1531F6782E100FEC55A /* YouKuPlayButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouKuPlayButton.h; sourceTree = "<group>"; };
-		B833C1541F6782E100FEC55A /* YouKuPlayButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouKuPlayButton.m; sourceTree = "<group>"; };
+		B833C1561F67830800FEC55A /* MMPulseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMPulseView.h; sourceTree = "<group>"; };
+		B833C1571F67830800FEC55A /* MMPulseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMPulseView.m; sourceTree = "<group>"; };
+		B833C15C1F67834F00FEC55A /* iQiYiPlayButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iQiYiPlayButton.h; sourceTree = "<group>"; };
+		B833C15D1F67834F00FEC55A /* iQiYiPlayButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iQiYiPlayButton.m; sourceTree = "<group>"; };
 		B85EB2711F32D21B00355CEE /* CFTopButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFTopButtonView.h; sourceTree = "<group>"; };
 		B85EB2721F32D21B00355CEE /* CFTopButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFTopButtonView.m; sourceTree = "<group>"; };
 		B85EB2741F32D77F00355CEE /* miyou_icon_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "miyou_icon_close@3x.png"; sourceTree = "<group>"; };
@@ -166,13 +171,22 @@
 			path = YouKuPlayButton;
 			sourceTree = "<group>";
 		};
-		B833C1521F6782E100FEC55A /* YouKuPlayButton */ = {
+		B833C1551F67830800FEC55A /* MMPulseView */ = {
 			isa = PBXGroup;
 			children = (
-				B833C1531F6782E100FEC55A /* YouKuPlayButton.h */,
-				B833C1541F6782E100FEC55A /* YouKuPlayButton.m */,
+				B833C1561F67830800FEC55A /* MMPulseView.h */,
+				B833C1571F67830800FEC55A /* MMPulseView.m */,
 			);
-			path = YouKuPlayButton;
+			path = MMPulseView;
+			sourceTree = "<group>";
+		};
+		B833C15B1F67834F00FEC55A /* iQiYiPlayButton */ = {
+			isa = PBXGroup;
+			children = (
+				B833C15C1F67834F00FEC55A /* iQiYiPlayButton.h */,
+				B833C15D1F67834F00FEC55A /* iQiYiPlayButton.m */,
+			);
+			path = iQiYiPlayButton;
 			sourceTree = "<group>";
 		};
 		B88073DB1F25DA6A00EB67D2 /* DCPathButton */ = {
@@ -316,8 +330,9 @@
 		B8F5AE3C1F18CB0500AE3E03 /* CFButton */ = {
 			isa = PBXGroup;
 			children = (
+				B833C15B1F67834F00FEC55A /* iQiYiPlayButton */,
+				B833C1551F67830800FEC55A /* MMPulseView */,
 				B833C14F1F6782D700FEC55A /* YouKuPlayButton */,
-				B833C1521F6782E100FEC55A /* YouKuPlayButton */,
 				B8D119D91F2B0E6700B31654 /* CFMenuButton */,
 				B88073DB1F25DA6A00EB67D2 /* DCPathButton */,
 				B88073E21F25DA6A00EB67D2 /* MCFireworksButton */,
@@ -446,6 +461,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B833C15E1F67836B00FEC55A /* iQiYiPlayButton.m in Sources */,
+				B833C1581F67832A00FEC55A /* MMPulseView.m in Sources */,
+				B833C1591F67832A00FEC55A /* YouKuPlayButton.m in Sources */,
 				B8279AF61F3024DA00800799 /* UIButton+ImageTitleSpacing.m in Sources */,
 				B8D119E91F2B2F9F00B31654 /* UIImage+CFImage.m in Sources */,
 				B8D119F31F2B451800B31654 /* CFItemGroup.m in Sources */,
