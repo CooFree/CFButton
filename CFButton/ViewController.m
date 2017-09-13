@@ -59,6 +59,8 @@
 
     [self ConfigureDCPathButton];
 
+    [self addPlusView];
+
 
 }
 - (void)btn2Click:(UIButton *)sender {
@@ -247,6 +249,39 @@
 
 
 - (void)addPlusView {
+    MMPulseView *pulseView = [MMPulseView new];
+    self.pulseArray = @[].mutableCopy;
+    [self.pulseArray addObject:pulseView];
+    CGRect screenRect = [UIScreen mainScreen].bounds;
+
+    pulseView.frame = CGRectMake(0,
+                                 0,
+                                 160,
+                                 160);
+    
+    [self.view addSubview:pulseView];
+    pulseView.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    pulseView.colors = @[(__bridge id)[UIColor colorWithRed:0.996 green:0.647 blue:0.008 alpha:1].CGColor,(__bridge id)[UIColor colorWithRed:1 green:0.31 blue:0.349 alpha:1].CGColor];
+
+    CGFloat posY = (CGRectGetHeight(screenRect)-320)/2/CGRectGetHeight(screenRect);
+    pulseView.startPoint = CGPointMake(0.5, posY);
+    pulseView.endPoint = CGPointMake(0.5, 1.0f - posY);
+
+    pulseView.minRadius = 40;
+    pulseView.maxRadius = 80;
+
+    pulseView.duration = 2;
+    pulseView.count = 1;
+    pulseView.lineWidth = 2.0f;
+
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:btn];
+    [btn setBackgroundImage:[UIImage imageNamed:@"button"] forState:UIControlStateNormal];
+    [btn setTitle:@"Tap" forState:UIControlStateNormal];
+    btn.frame = CGRectMake(0, 0, 100, 100);
+    btn.center = pulseView.center;
+    [btn addTarget:self action:@selector(actionPulse) forControlEvents:UIControlEventTouchUpInside];
+    /*
     NSInteger maxI = 2;
     NSInteger maxJ = 2;
 
@@ -303,7 +338,7 @@
                     pulseView.maxRadius = 100;
 
                     pulseView.duration = 2;
-                    pulseView.count = 4;
+                    pulseView.count = 1;
                     pulseView.lineWidth = 2.0f;
 
                     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -362,14 +397,16 @@
             }
         }
     }
+    */
 }
 - (void)actionPulse
 {
-    MMPulseView *pulseView = self.pulseArray[1];
+    MMPulseView *pulseView = self.pulseArray[0];
 
     pulseView.tag = 1 - pulseView.tag;
 
-    (pulseView.tag>0)?[pulseView startAnimation]:[pulseView stopAnimation];
+    [pulseView startAnimation];
+//    (pulseView.tag>0)?[pulseView startAnimation]:[pulseView stopAnimation];
 }
 
 @end

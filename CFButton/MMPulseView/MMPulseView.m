@@ -146,22 +146,59 @@
 {
     CGRect fromRect = CGRectMake(CGRectGetMidX(self.bounds)-self.minRadius, CGRectGetMidY(self.bounds)-self.minRadius, self.minRadius*2, self.minRadius*2);
     CGRect toRect   = CGRectMake(CGRectGetMidX(self.bounds)-self.maxRadius, CGRectGetMidY(self.bounds)-self.maxRadius, self.maxRadius*2, self.maxRadius*2);
-    
+
+
+    CAGradientLayer *gradientLayer = ({
+        CAGradientLayer *layer = [CAGradientLayer new];
+
+        [self.layer addSublayer:layer];
+
+        layer;
+    });
+
+    CAReplicatorLayer *replicatorLayer = ({
+        CAReplicatorLayer *layer = [CAReplicatorLayer new];
+
+        gradientLayer.mask = layer;
+
+        layer;
+    });
+
+    CAShapeLayer *circleLayer = ({
+        CAShapeLayer *layer = [CAShapeLayer new];
+        layer.strokeColor     = [UIColor whiteColor].CGColor;
+        layer.fillColor       = [UIColor clearColor].CGColor;
+
+        [replicatorLayer addSublayer:layer];
+
+        layer;
+    });
+
+    gradientLayer.colors = self.colors;
+    gradientLayer.locations = self.locations;
+    replicatorLayer.instanceCount = self.count;
+    replicatorLayer.instanceDelay = self.duration/(CGFloat)self.count;
+    circleLayer.lineWidth = self.lineWidth;
+
+    gradientLayer.frame = self.bounds;
+    replicatorLayer.frame = self.bounds;
+    circleLayer.frame     = self.bounds;
+
     CABasicAnimation *zoomAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
     zoomAnimation.duration          = self.duration;
     zoomAnimation.fromValue         = (__bridge id)[UIBezierPath bezierPathWithOvalInRect:fromRect].CGPath;
     zoomAnimation.toValue           = (__bridge id)[UIBezierPath bezierPathWithOvalInRect:toRect].CGPath;
-    zoomAnimation.repeatCount       = HUGE_VAL;
+//    zoomAnimation.repeatCount       = HUGE_VAL;
     zoomAnimation.timingFunction    = self.timingFunction;
-    [self.circleLayer addAnimation:zoomAnimation forKey:@"zoom"];
+    [circleLayer addAnimation:zoomAnimation forKey:@"zoom"];
     
     CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"strokeColor"];
     fadeAnimation.duration          = self.duration;
     fadeAnimation.fromValue         = (__bridge id)[UIColor whiteColor].CGColor;
     fadeAnimation.toValue           = (__bridge id)[UIColor clearColor].CGColor;
-    fadeAnimation.repeatCount       = HUGE_VAL;
+//    fadeAnimation.repeatCount       = HUGE_VAL;
     fadeAnimation.timingFunction    = self.timingFunction;
-    [self.circleLayer addAnimation:fadeAnimation forKey:@"fade"];
+    [circleLayer addAnimation:fadeAnimation forKey:@"fade"];
 }
 
 - (void)stopAnimation
