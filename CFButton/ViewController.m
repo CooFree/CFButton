@@ -44,9 +44,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UIButton *btn = [UIButton buttonWithTitle:@"MenuPopView" normalColor:[UIColor blackColor] diableColor:[UIColor grayColor] fontSize:17 target:self action:@selector(btnClick)];
+    UIButton *btn = [UIButton buttonWithTitle:@"新浪微博" normalColor:[UIColor blackColor] diableColor:[UIColor grayColor] fontSize:17 target:self action:@selector(btnClick)];
     btn.backgroundColor = [UIColor lightGrayColor];
-    btn.frame = CGRectMake(self.view.frame.size.width/2-60, 100, 120, 32);
+    btn.frame = CGRectMake(self.view.frame.size.width/4-60, 100, 120, 32);
     [self.view addSubview:btn];
 
     UIButton *btn2 = [UIButton buttonWithImagename:@"miyou_icon_+_fabu" hightImagename:nil bgImagename:nil target:self action:@selector(btn2Click:)];
@@ -61,7 +61,7 @@
 
     [self addPlusView];
 
-
+    [self addIQiYiPlayButton];
 }
 - (void)btn2Click:(UIButton *)sender {
 
@@ -105,7 +105,7 @@
 
 
     _countDownCode = [JKCountDownButton buttonWithType:UIButtonTypeCustom];
-    _countDownCode.frame = CGRectMake(self.view.frame.size.width/2-60, 200, 120, 32);
+    _countDownCode.frame = CGRectMake(self.view.frame.size.width/4*3-60, 100, 120, 32);
     [_countDownCode setTitle:@"获取验证码" forState:UIControlStateNormal];
     _countDownCode.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:_countDownCode];
@@ -140,7 +140,7 @@
                                                            hilightedImage:[UIImage imageNamed:@"chooser-button-tab-highlighted"]];
     _pathAnimationView = dcPathButton;
     dcPathButton.pathDirection = PathDirectionUP;
-    dcPathButton.patnBtnCenter = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2);
+    dcPathButton.patnBtnCenter = CGPointMake(self.view.frame.size.width/4, 200);
     dcPathButton.delegate = self;
 
     // Configure item buttons
@@ -192,7 +192,7 @@
 -(void)clickGoodAnimation{
 
     if (!_goodBtn) {
-        _goodBtn = [[MCFireworksButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-25, SCREEN_HEIGHT/2+50, 50, 50)];
+        _goodBtn = [[MCFireworksButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*3-25, 200-25, 50, 50)];
         _goodBtn.particleImage = [UIImage imageNamed:@"Sparkle"];
         _goodBtn.particleScale = 0.05;
         _goodBtn.particleScaleRange = 0.02;
@@ -217,14 +217,14 @@
 
 - (void)addIQiYiPlayButton {
     //创建播放按钮，需要初始化一个状态，即显示暂停还是播放状态
-    _iQiYiPlayButton = [[iQiYiPlayButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60) state:iQiYiPlayButtonStatePlay];
-    _iQiYiPlayButton.center = CGPointMake(self.view.center.x, self.view.bounds.size.height/3);
+    _iQiYiPlayButton = [[iQiYiPlayButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4-30, 400, 60, 60) state:iQiYiPlayButtonStatePlay];
+//    _iQiYiPlayButton.center = CGPointMake(self.view.center.x, self.view.bounds.size.height/3);
     [_iQiYiPlayButton addTarget:self action:@selector(iQiYiPlayMethod) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_iQiYiPlayButton];
 
     //创建播放按钮，需要初始化一个状态，即显示暂停还是播放状态
-    _youKuPlayButton = [[YouKuPlayButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60) state:YouKuPlayButtonStatePlay];
-    _youKuPlayButton.center = CGPointMake(self.view.center.x, self.view.bounds.size.height*2/3);
+    _youKuPlayButton = [[YouKuPlayButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*3-30, 400, 60, 60) state:YouKuPlayButtonStatePlay];
+//    _youKuPlayButton.center = CGPointMake(self.view.center.x, self.view.bounds.size.height*2/3);
     [_youKuPlayButton addTarget:self action:@selector(youKuPlayMethod) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_youKuPlayButton];
 }
@@ -254,8 +254,8 @@
     [self.pulseArray addObject:pulseView];
     CGRect screenRect = [UIScreen mainScreen].bounds;
 
-    pulseView.frame = CGRectMake(0,
-                                 0,
+    pulseView.frame = CGRectMake(SCREEN_WIDTH/2-80,
+                                 200,
                                  160,
                                  160);
     
